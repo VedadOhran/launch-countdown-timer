@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+body{
+  background: url("./images/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(235, 16%, 14%);
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 8rem;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.3rem;
+}
+
+.countdown-container{
+  display: flex;
+  margin-top: 3rem;
+}
+
+.countdown-all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-card{
+  position: relative;
+  margin: 1rem;
+ text-align: center;
+ height: 140px;
+ width: 150px;
+ border-radius: 8px;
+ background:hsl(236, 21%, 26%);
+ box-shadow: 0px 8px 0px 0px #16151d;
+}
+
+.countdown-card::before{
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  background: hsl(235, 16%, 14%);
+  border-radius: 50%;
+  height: 14px;
+  width: 12px;
+}
+
+.countdown-card::after{
+  content: "";
+  position: absolute;
+  right:-5px;
+  top: 50%;
+  background: hsl(235, 16%, 14%);
+  border-radius: 50%;
+  height: 14px;
+  width: 12px;
+}
+
+.time{
+  font-size: 6rem;
+  padding: 0.7rem;
+ 
+}
+
+h3{
+  background: linear-gradient(to bottom, #f32170,
+  #fa819f, #fb6087, #fb6087);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.countdown-all span{
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: hsl(237, 18%, 59%);
+}
+
+/*Footer*/
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer img{
+  width: 100%;
+}
+
+.footer-background {
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  z-index: -1;
+
+}
+
+.social-media-icons{
+  display: flex;
+  position: absolute;
+  
+}
+
+.social-media-icons img{
+  margin: 1rem;
+  color:#fb6087;
+  cursor: pointer;
+}
+
+.social-media-icons img:hover{
+  filter: invert(76%)
+  sepia(57%)
+  saturate(6950%)
+  hue-rotate(327deg)
+  brightness(103%)
+  contrast(96%);
+}
+/*Footer*/
+
+
+@media(max-width:900px){
+  .countdown-card{
+   width: auto;
+   height: auto;
+  }
+
+  .countdown-card::before, .countdown-card::after{
+    height: 10px;
+  }
+  .time{
+    font-size: 4rem;
+  }
+  h1{
+  letter-spacing: 0.1rem;
+  }
+}
+
+@media(max-width:600px){
+  .time{
+    font-size: 2rem;
+  }
+}
